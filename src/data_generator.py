@@ -12,9 +12,9 @@ class DataGenerator():
         pass
 
     def get_data(self):
-        x0 = np.ones((self.n,1))
-        x1 = np.array([np.linspace(self.x_min, self.x_max, self.n)]).T
-        X = np.column_stack([x0,x1])
+        x0 = np.ones((self.n,1))    # coluna de 1 - nx1
+        x1 = np.array([np.linspace(self.x_min, self.x_max, self.n)]).T  # preenche array com valores dentro do intervalo - linha - que é transposta
+        X = np.column_stack([x0,x1])  #nxn  
         y = X @ self.w
         e = np.array([st.norm.rvs(size=self.n)]).T
         y = y + e

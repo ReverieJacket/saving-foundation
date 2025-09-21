@@ -22,8 +22,8 @@ class AlgorithmAnalyzer(abc.ABC):
 
 class PlotterAlgorithmObserver(AlgorithmAnalyzer):
  
-    def init(self) -> None:
-        super().init()
+    def __init__(self) -> None:
+        super().__init__()
  
  
     def notify_started(self, alg: al.Algorithm):
